@@ -7,11 +7,20 @@ Doc Logic Review Agent 是一个轻量的多 Agent 文档审查工具，用 Open
 - 是否依赖未解释的 inside knowledge
 - 是否疑似泄露内部代号、客户信息、未公开指标、漏洞细节、密钥等敏感信息
 
-已拉取的参考项目放在 `external/`：
+如需在本地查看参考项目，可以放在 `external/`。该目录是本地参考资料目录，不会提交到 GitHub：
 
 - `external/document_ai_agents`
 - `external/agent-sop`
 - `external/ai-code-reviewer`
+
+可选拉取命令：
+
+```powershell
+mkdir external
+git clone --depth 1 https://github.com/CVxTz/document_ai_agents.git .\external\document_ai_agents
+git clone --depth 1 https://github.com/strands-agents/agent-sop.git .\external\agent-sop
+git clone --depth 1 https://github.com/calimero-network/ai-code-reviewer.git .\external\ai-code-reviewer
+```
 
 本项目主体是独立实现，默认按 AIHubMix 的 OpenAI-compatible 接口运行。
 
